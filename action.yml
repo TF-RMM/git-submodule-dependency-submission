@@ -1,0 +1,19 @@
+name: 'Git Submodule Dependency Submission'
+description: 'Calculates git submodule dependencies and submits the list to the Dependency Submission API'
+author: 'Arm Ltd'
+inputs:
+  token:
+    description: "GitHub Personal Access Token (PAT). Defaults to PAT provided by Action runner"
+    required: false
+    default: ${{ github.token }}
+  manifest:
+    required: false
+    description: 'Path to the manifest file for the git submodules (.gitmodules file). Defaults to .gitmodules'
+    default: '.gitmodules'
+  development-deps:
+    required: false
+    descripton: 'Comma-separated list of git submodule dependencies that are only needed during development.'
+    default: ''
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

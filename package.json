@@ -1,0 +1,19 @@
+{
+  "name": "git-submodule-dependency-submission",
+  "version": "1.0",
+  "description": "Calculates git submodule dependecies and submits the list to the Dependency Submission API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Arm Ltd.",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^5.1.1",
+    "@github/dependency-submission-toolkit": "^1.2.10",
+    "@types/node": "^20.6.0",
+    "typescript": "^5.2.2"
+  }
+}
